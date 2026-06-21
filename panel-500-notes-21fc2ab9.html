@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>站点介绍 · 500彩票网官方</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: #f6fafc;
+            color: #1a2f3b;
+            line-height: 1.6;
+            padding: 1.5rem 1rem;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* hero */
+        .hero {
+            background: linear-gradient(145deg, #e0f2f5 0%, #c5e6ed 100%);
+            border-radius: 2.5rem;
+            padding: 2.8rem 2rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 6px 18px rgba(0, 90, 100, 0.06);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #0d4a5a;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #2b6373;
+            max-width: 620px;
+            margin: 0 auto 1rem;
+            font-weight: 400;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(2px);
+            padding: 0.35rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #106b7a;
+            border: 1px solid rgba(55, 160, 170, 0.2);
+        }
+
+        /* 网格卡片区 */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.6rem;
+        }
+
+        @media (min-width: 660px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 920px) {
+            .grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 1.8rem;
+            padding: 1.8rem 1.6rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 70, 80, 0.04);
+            border: 1px solid #ddeef2;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: #acd7df;
+            box-shadow: 0 8px 20px rgba(0, 90, 100, 0.06);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0.4rem 0 0.35rem;
+            color: #144d5a;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2b4b56;
+            margin-bottom: 0.8rem;
+        }
+
+        .card .meta {
+            font-size: 0.85rem;
+            color: #607f89;
+            border-top: 1px solid #e4f0f3;
+            padding-top: 0.7rem;
+            margin-top: 0.4rem;
+        }
+
+        /* 场景 + 提示 混合区 */
+        .insight-block {
+            background: #ffffff;
+            border-radius: 2rem;
+            padding: 2rem 1.8rem;
+            margin-bottom: 2.2rem;
+            border: 1px solid #cde4e9;
+            box-shadow: 0 3px 10px rgba(0, 70, 80, 0.02);
+        }
+
+        .insight-block h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #094652;
+            margin-bottom: 1rem;
+            border-left: 5px solid #3e9baa;
+            padding-left: 1rem;
+        }
+
+        .insight-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+
+        @media (min-width: 700px) {
+            .insight-flex {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .insight-flex .item {
+                flex: 1 1 240px;
+            }
+        }
+
+        .item {
+            background: #f5fbfd;
+            padding: 1.1rem 1.3rem;
+            border-radius: 1.2rem;
+        }
+
+        .item strong {
+            display: block;
+            font-size: 1rem;
+            color: #0b4b58;
+            margin-bottom: 0.2rem;
+        }
+
+        .item p {
+            font-size: 0.92rem;
+            color: #2b5865;
+        }
+
+        .item .small-note {
+            font-size: 0.85rem;
+            color: #547a86;
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            background: #e4f3f7;
+            border-radius: 2rem;
+            padding: 1.8rem 1.8rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .faq-summary h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #094652;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #c7dde3;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #145b69;
+            font-size: 0.95rem;
+        }
+
+        .faq-item .a {
+            font-size: 0.88rem;
+            color: #2f5b66;
+            margin-top: 0.2rem;
+        }
+
+        /* 链接段落 */
+        .link-sentence {
+            background: #ffffff;
+            border-radius: 1.6rem;
+            padding: 1.2rem 1.8rem;
+            margin-top: 0.8rem;
+            border: 1px solid #c5dfe5;
+            font-size: 0.98rem;
+            color: #1f4a56;
+            text-align: center;
+        }
+
+        .link-sentence a {
+            color: #0b6f82;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #6bb5c4;
+            transition: border-color 0.15s;
+        }
+
+        .link-sentence a:hover {
+            border-bottom-color: #0b6f82;
+        }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.82rem;
+            color: #567c87;
+            padding-bottom: 0.5rem;
+            border-top: 1px solid #d0e3e8;
+            padding-top: 1.5rem;
+        }
+
+        /* 小屏微调 */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 2rem 1rem;
+            }
+            .insight-block {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero -->
+    <div class="hero">
+        <h1>500彩票网官方 · 站点介绍</h1>
+        <p class="sub">一个长期维护的信息聚合平台，围绕体育数据与赛事参考提供持续更新的内容。以下从几个层面梳理其定位与使用脉络。</p>
+        <span class="tagline">可信说明 · 功能亮点 · 应用场景</span>
+    </div>
+
+    <!-- 网格卡片：摘要 + 亮点 + 使用建议 -->
+    <div class="grid">
+        <div class="card">
+            <span class="card-icon">📋</span>
+            <h3>站点摘要</h3>
+            <p>「500彩票网官方」并非彩票销售终端，而是以体育数据、赛事资讯、历史统计为主的参考性平台。页面结构简洁，信息归类清晰，适合对数字与数据有习惯性关注的用户日常浏览。</p>
+            <div class="meta">数据来源均标注原始参考，无诱导性描述。</div>
+        </div>
+        <div class="card">
+            <span class="card-icon">✨</span>
+            <h3>功能亮点</h3>
+            <p>多维度赛事筛选、实时比分更新、历史交锋数据对比、自定义收藏夹。所有功能均围绕信息呈现，不包含自动投注或资金流转模块。</p>
+            <div class="meta">界面强调低干扰，以阅读和数据对比为核心。</div>
+        </div>
+        <div class="card">
+            <span class="card-icon">🧭</span>
+            <h3>使用建议</h3>
+            <p>适合作为赛前信息浏览与赛后数据回顾的工具。建议搭配其他资讯源交叉验证，保持理性判断。平台不提供任何“必胜”策略或保证。</p>
+            <div class="meta">每次使用注意时间管理，避免过度依赖单一数据。</div>
+        </div>
+    </div>
+
+    <!-- 场景 + 提示（混合） -->
+    <div class="insight-block">
+        <h2>常见场景与注意提示</h2>
+        <div class="insight-flex">
+            <div class="item">
+                <strong>🏟️ 赛前信息查阅</strong>
+                <p>浏览近期交锋记录、主客场表现、伤病列表。页面采用网格卡片展示，便于快速扫描。</p>
+                <div class="small-note">数据更新延迟通常在1-3分钟，以官方源为准。</div>
+            </div>
+            <div class="item">
+                <strong>📊 赛后统计对比</strong>
+                <p>查看射门、控球率、角球等详细统计。支持按联赛、赛季筛选，历史数据可追溯至多个赛季前。</p>
+                <div class="small-note">统计口径可能因联赛不同略有差异。</div>
+            </div>
+            <div class="item">
+                <strong>⚖️ 可信说明</strong>
+                <p>平台不接入任何支付或账户充值系统，无实时投注功能。所有内容仅供参考，用户应自行判断。</p>
+                <div class="small-note">信息均来自公开数据，不构成建议。</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h3>常见疑问摘要</h3>
+        <div class="faq-item">
+            <div class="q">是否需要注册才能浏览大部分内容？</div>
+            <div class="a">公开数据页面无需登录即可访问。部分个性化功能（如收藏、历史记录）需免费注册账号。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">平台是否推荐某种玩法或策略？</div>
+            <div class="a">不推荐、不暗示任何策略。平台仅陈列历史数据与即时信息，不提供预测或倾向性指引。</div>
+        </div>
+        <div class="faq-item">
+            <div class="q">移动端体验如何？</div>
+            <div class="a">页面采用响应式设计，在手机与平板上自动适配卡片布局，触摸交互友好。建议使用现代浏览器访问。</div>
+        </div>
+    </div>
+
+    <!-- 自然嵌入链接的句子 -->
+    <div class="link-sentence">
+        若希望进一步了解数据维度与界面结构，可直接浏览
+        <a href="https://panel-500.com">500彩票网官方</a>
+        主页。信息组织方式以实用和清晰为出发点，适合日常参考。
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        内容仅供参考，不构成任何形式的投资或行为建议。请保持理性，合理分配时间与注意力。
+    </div>
+
+</div>
+</body>
+</html>
